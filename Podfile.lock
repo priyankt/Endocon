@@ -1,0 +1,22 @@
+PODS:
+  - FlatUIKit (1.2)
+  - InnerBand (1.0.5)
+  - MKNetworkKit (0.87):
+    - Reachability (~> 3.1.0)
+  - Reachability (3.1.1)
+  - SVProgressHUD (0.9)
+
+DEPENDENCIES:
+  - FlatUIKit
+  - InnerBand
+  - MKNetworkKit
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  FlatUIKit: 43b2acaa6f4ef57539b51b00e4ce62d506e33e11
+  InnerBand: 04bd2f47bdda0c64a1ebcbf9698a643e5ea19da5
+  MKNetworkKit: f174100f92473012138b6b1c3040266af8d43a14
+  Reachability: 2be6bc2fd2bd31d97f5db33e75e4b29c79e95883
+  SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
+
+COCOAPODS: 0.22.2
