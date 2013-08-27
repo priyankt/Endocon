@@ -7,12 +7,15 @@
 //
 
 #import "ECAppDelegate.h"
+#import "ECConstants.h"
 
 @implementation ECAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.webService = [[ECWebService alloc] initWithHostName:[ECConstants baseURL]];
+    
     return YES;
 }
 							

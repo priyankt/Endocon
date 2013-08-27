@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ECWebService.h"
 
 @interface ECAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) ECWebService *webService;
 
 @end

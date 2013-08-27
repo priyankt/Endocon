@@ -11,13 +11,17 @@
 #import "NSString+FontAwesome.h"
 #import "UIColor+FlatUI.h"
 #import "UIFont+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "UIBarButtonItem+FlatUI.h"
+#import "ECConstants.h"
+#import "ECMainHeaderView.h"
+#import "SVProgressHUD.h"
 
 @interface ECMainViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *trophyLabel;
-@property (weak, nonatomic) IBOutlet UILabel *winnerLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong) NSArray *menuItems;
+@property (strong, nonatomic) NSString *winnerText;
 
 @end
 
@@ -35,24 +39,62 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    //ECMainView *mainView = [[ECMainView alloc] initWithFrame:self.view.frame];
-    //self.view = mainView;
     
-    self.title = @"Home";
+    // get winner for this week
+    [self getWinner];
     
-    self.trophyLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
-    self.trophyLabel.text = [NSString fontAwesomeIconStringForEnum:FAIconTrophy];
-    self.trophyLabel.textColor = [UIColor pomegranateColor];
+    // Configure UI
+    [self configureUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}
+
+- (void)getWinner
+{
+    MKNetworkOperation *getWinnerOperation = [ [ECConstants sharedEngine] getWinnerWithCompletionHandler:^(NSString *winnerText) {
+        [SVProgressHUD dismiss];
+        if (winnerText && winnerText.length > 0) {
+            NSLog(@"%@", winnerText);
+            self.winnerText = winnerText;
+        }
+    } errorHandler:^(NSError *error){
+        [SVProgressHUD dismiss];
+        NSLog(@"%@", error);
+    }];
     
-    self.winnerLabel.font = [UIFont boldFlatFontOfSize:12];
-    self.winnerLabel.text = @"Last Week Quiz Winner: Dr. Mahavir Jain";
-    self.winnerLabel.textColor = [UIColor pomegranateColor];
+    [SVProgressHUD showWithStatus:@"Loading.." maskType:SVProgressHUDMaskTypeGradient];
+    [[ECConstants sharedEngine] enqueueOperation:getWinnerOperation];
+}
+
+- (void)configureUI
+{
+    //self.title = @"Endocon 2014";
+    self.navigationController.navigationBarHidden = YES;
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.menuItems = [NSArray arrayWithObjects:@"Weekly Quiz", @"Program Schedule", @"Program Workshop", @"Faculty", @"About Endocon", @"Suggestions", nil];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"splash-background.png"]];
+    //self.view.backgroundColor = [UIColor colorFromHexCode:@"#c2eafb"];
+    //self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.menuItems = [ NSArray arrayWithObjects:
+                        @{@"image":@"question.png",@"title":@"Quiz",@"segue":@"showQuiz"},@{@"image":@"document.png",@"title":@"Abstract",@"segue":@"showAbstract"},@{@"image":@"calendar.png",@"title":@"Schedule",@"segue":@"showSchedule"},@{@"image":@"settings-3.png",@"title":@"Training",@"segue":@"showWorkshop"},@{@"image":@"star.png",@"title":@"Gurukul",@"segue":@"showGurukul"},@{@"image":@"microphone.png",@"title":@"Faculty",@"segue":@"showFaculty"},@{@"image":@"users.png",@"title":@"Committe",@"segue":@"showCommitte"},@{@"image":@"info.png",@"title":@"About",@"segue":@"showAbout"},@{@"image":@"compose-4.png",@"title":@"Suggestions",@"segue":@"showSuggestion"}, @{@"image":@"map.png",@"title":@"Venue",@"segue":@"showVenue"}, @{@"image":@"envelope.png",@"title":@"Contact",@"segue":@"showContact"}, @{@"image":@"newspaper.png",@"title":@"News",@"segue":@"showNews"}, nil
+                      ];
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:[ECConstants titleSize]]};
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[ECConstants webRedColor]];
+    [UIBarButtonItem configureFlatButtonsWithColor:[ECConstants webBlueColor]
+                                  highlightedColor:[ECConstants webBlueColor]
+                                      cornerRadius:3];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -60,43 +102,38 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSLog(@"i count");
     return [self.menuItems count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     ECMainViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.menuLabel = self.menuItems[indexPath.item];
-    cell.menuImage = [UIImage imageNamed:@"settings-icon.png"];
+    
+    cell.menuLabel = self.menuItems[indexPath.item][@"title"];
+    cell.menuImage = [UIImage imageNamed:self.menuItems[indexPath.item][@"image"]];
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.item) {
-        case 0:
-            [self performSegueWithIdentifier:@"showQuiz" sender:self];
-            break;
-        case 1:
-            [self performSegueWithIdentifier:@"showSchedule" sender:self];
-            break;
-        case 2:
-            [self performSegueWithIdentifier:@"showWorkshop" sender:self];
-            break;
-        case 3:
-            [self performSegueWithIdentifier:@"showFaculty" sender:self];
-            break;
-        case 4:
-            [self performSegueWithIdentifier:@"showAbout" sender:self];
-            break;
-        case 5:
-            [self performSegueWithIdentifier:@"showSuggestion" sender:self];
-            break;
-        default:
-            break;
+    [self performSegueWithIdentifier:self.menuItems[indexPath.item][@"segue"] sender:self];
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    ECMainHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"collectionViewHeader" forIndexPath:indexPath];
+    
+    if (self.winnerText) {
+        headerView.winnerLabel.font = [UIFont boldFlatFontOfSize:[ECConstants titleSize]];
+        headerView.winnerLabel.text = self.winnerText;
+        headerView.winnerLabel.textColor = [ECConstants webBlueColor];
     }
+    else {
+        headerView.winnerLabel.hidden = YES;
+    }
+    
+    return headerView;
 }
 
 - (void)didReceiveMemoryWarning

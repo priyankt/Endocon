@@ -7,8 +7,9 @@
 //
 
 #import "ECMainViewCell.h"
+#import "ECConstants.h"
 #import "UIFont+FlatUI.h"
-#import "UiColor+FlatUI.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ECMainViewCell()
 
@@ -38,7 +39,7 @@
     _menuLabel = menuLabel;
     self.labelView.text = menuLabel;
     self.labelView.font = [UIFont boldFlatFontOfSize:12];
-    self.labelView.textColor = [UIColor pomegranateColor];
+    self.labelView.textColor = [UIColor blackColor];
 }
 
 /*

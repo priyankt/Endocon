@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ECSuggestionViewController : UITableViewController
+@interface ECSuggestionViewController : UITableViewController <UITextViewDelegate>
 
 @end

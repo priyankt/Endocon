@@ -8,6 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		02868F865D33494A95D962E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E935428A1C6427291934F6A /* libPods.a */; };
+		9E1461A917CB6A9600357057 /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1461A817CB6A9600357057 /* newspaper.png */; };
+		9E1461AD17CB6B7A00357057 /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1461AC17CB6B7A00357057 /* microphone.png */; };
+		9E1461AF17CB6BA100357057 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1461AE17CB6BA100357057 /* map.png */; };
+		9E1461B117CB6BF500357057 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1461B017CB6BF500357057 /* envelope.png */; };
+		9E1461BA17CB6F3800357057 /* ECNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1461B917CB6F3800357057 /* ECNewsViewController.m */; };
+		9E1461C017CB774F00357057 /* ECContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1461BF17CB774F00357057 /* ECContactViewController.m */; };
+		9E1461C317CB7CC200357057 /* ECVenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1461C217CB7CC200357057 /* ECVenueViewController.m */; };
+		9E2104B717C729D3001F1392 /* Vision202Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2104B617C729D3001F1392 /* Vision202Logo.png */; };
+		9E2104BD17C79608001F1392 /* splash-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2104BC17C79608001F1392 /* splash-background.png */; };
+		9E239A6317B4F21F00DC6800 /* marriott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A6217B4F21F00DC6800 /* marriott.jpg */; };
+		9E239A6517B51B7300DC6800 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A6417B51B7300DC6800 /* calendar.png */; };
+		9E239A6917B51BB400DC6800 /* compose-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A6817B51BB400DC6800 /* compose-4.png */; };
+		9E239A6C17B51BFF00DC6800 /* settings-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A6A17B51BFF00DC6800 /* settings-3.png */; };
+		9E239A6D17B51BFF00DC6800 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A6B17B51BFF00DC6800 /* users.png */; };
+		9E239A7517B524DA00DC6800 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A7417B524DA00DC6800 /* info.png */; };
+		9E239A7717B5252300DC6800 /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A7617B5252300DC6800 /* question.png */; };
+		9E239A7917B5294B00DC6800 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A7817B5294B00DC6800 /* star.png */; };
+		9E239A7B17B529A600DC6800 /* bullhorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E239A7A17B529A600DC6800 /* bullhorn.png */; };
+		9E239A7E17B52B0200DC6800 /* ECScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E239A7D17B52B0200DC6800 /* ECScheduleTableViewController.m */; };
+		9E239A8117B52B1F00DC6800 /* ECWorkshopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E239A8017B52B1F00DC6800 /* ECWorkshopTableViewController.m */; };
+		9E28B31017AF847F0018E344 /* ECConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E28B30F17AF847F0018E344 /* ECConstants.m */; };
+		9E28B31317AFA5B50018E344 /* ECWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E28B31217AFA5B50018E344 /* ECWebService.m */; };
+		9E3DEBD217C8EB85008B674F /* splash-background-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3DEBD117C8EB85008B674F /* splash-background-dark.png */; };
+		9E436C3A17B1344000554D4E /* ECQuizTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E436C3917B1344000554D4E /* ECQuizTableViewController.m */; };
+		9E893CC417C4C5C300A2D905 /* ECMainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E893CC317C4C5C300A2D905 /* ECMainHeaderView.m */; };
+		9E893CCB17C4DEE500A2D905 /* ECGurukulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E893CCA17C4DEE500A2D905 /* ECGurukulViewController.m */; };
+		9E893CCE17C4F33D00A2D905 /* ECAbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E893CCD17C4F33D00A2D905 /* ECAbstractViewController.m */; };
+		9EA6EA4817C8E46C009773E9 /* dsge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA6EA4717C8E46C009773E9 /* dsge.png */; };
+		9EC4447517B215DE00BEC95F /* ECFacultyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4447417B215DE00BEC95F /* ECFacultyTableViewController.m */; };
+		9EC4447817B2172C00BEC95F /* ECAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4447717B2172C00BEC95F /* ECAddressViewController.m */; };
+		9EC4447B17B21D1600BEC95F /* ECAboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4447A17B21D1600BEC95F /* ECAboutTableViewController.m */; };
+		9EC4447D17B225D300BEC95F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4447C17B225D300BEC95F /* MapKit.framework */; };
+		9EC4448017B22ED600BEC95F /* ECVenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4447F17B22ED600BEC95F /* ECVenueAnnotation.m */; };
 		9EC5DB3F17AB9416008E5009 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC5DB3E17AB9416008E5009 /* UIKit.framework */; };
 		9EC5DB4117AB9416008E5009 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC5DB4017AB9416008E5009 /* Foundation.framework */; };
 		9EC5DB4317AB9416008E5009 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC5DB4217AB9416008E5009 /* CoreGraphics.framework */; };
@@ -20,22 +53,73 @@
 		9EC5DB5817AB9417008E5009 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5DB5617AB9417008E5009 /* iPhone.storyboard */; };
 		9EC5DB5B17AB9417008E5009 /* ECSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB5A17AB9417008E5009 /* ECSplashViewController.m */; };
 		9EC5DB6917ABB51E008E5009 /* ECMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB6817ABB51E008E5009 /* ECMainViewController.m */; };
-		9EC5DB6C17ABB68D008E5009 /* ECAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB6B17ABB68D008E5009 /* ECAboutViewController.m */; };
-		9EC5DB6F17ABB6D2008E5009 /* ECScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB6E17ABB6D2008E5009 /* ECScheduleViewController.m */; };
-		9EC5DB7217ABB6DF008E5009 /* ECWorkshopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB7117ABB6DF008E5009 /* ECWorkshopViewController.m */; };
-		9EC5DB7517ABB6ED008E5009 /* ECFacultyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB7417ABB6ED008E5009 /* ECFacultyViewController.m */; };
-		9EC5DB7817ABB6FF008E5009 /* ECQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB7717ABB6FF008E5009 /* ECQuizViewController.m */; };
 		9EC5DB8117ABBAFB008E5009 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB8017ABBAFB008E5009 /* NSString+FontAwesome.m */; };
 		9EC5DB8317ABBB15008E5009 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5DB8217ABBB15008E5009 /* FontAwesome.ttf */; };
-		9EC5DB8617ABC047008E5009 /* ECMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB8517ABC047008E5009 /* ECMainView.m */; };
 		9EC5DB8917ABDFFB008E5009 /* ECMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB8817ABDFFB008E5009 /* ECMainViewCell.m */; };
-		9EC5DB8B17ABE553008E5009 /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5DB8A17ABE553008E5009 /* settings-icon.png */; };
 		9EC5DB8D17ABEAAE008E5009 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5DB8C17ABEAAE008E5009 /* logo.png */; };
 		9EC5DB9017AC0239008E5009 /* ECSuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5DB8F17AC0239008E5009 /* ECSuggestionViewController.m */; };
+		9EDB281617CA0654008CE5B7 /* ECCommitteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB281517CA0654008CE5B7 /* ECCommitteViewController.m */; };
+		9EDB281917CA0A95008CE5B7 /* ECCommitteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB281817CA0A95008CE5B7 /* ECCommitteCell.m */; };
+		9EDB282117CA18C5008CE5B7 /* document.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB282017CA18C5008CE5B7 /* document.png */; };
+		9EE67A3517C8A71600611732 /* ECRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE67A3417C8A71600611732 /* ECRegisterViewController.m */; };
+		9EE67A3717C8E3E700611732 /* sgei.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE67A3617C8E3E700611732 /* sgei.png */; };
+		9EE67A3917C8E3FB00611732 /* dmhrc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE67A3817C8E3FB00611732 /* dmhrc.png */; };
+		9EEC3FB817B370AA00A09734 /* ECFacultyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC3FB717B370AA00A09734 /* ECFacultyViewCell.m */; };
+		9EEC3FBA17B3A42500A09734 /* profile_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EEC3FB917B3A42500A09734 /* profile_placeholder.png */; };
+		9EEC3FD317B3E3BE00A09734 /* ECLoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC3FD217B3E3BE00A09734 /* ECLoginTableViewController.m */; };
+		9EF8E68917C8E49400D4E4BA /* psg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EF8E68817C8E49400D4E4BA /* psg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E935428A1C6427291934F6A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E1461A817CB6A9600357057 /* newspaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newspaper.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/newspaper.png"; sourceTree = "<group>"; };
+		9E1461AC17CB6B7A00357057 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = microphone.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/microphone.png"; sourceTree = "<group>"; };
+		9E1461AE17CB6BA100357057 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/map.png"; sourceTree = "<group>"; };
+		9E1461B017CB6BF500357057 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/envelope.png"; sourceTree = "<group>"; };
+		9E1461B817CB6F3800357057 /* ECNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNewsViewController.h; sourceTree = "<group>"; };
+		9E1461B917CB6F3800357057 /* ECNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNewsViewController.m; sourceTree = "<group>"; };
+		9E1461BE17CB774F00357057 /* ECContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECContactViewController.h; sourceTree = "<group>"; };
+		9E1461BF17CB774F00357057 /* ECContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECContactViewController.m; sourceTree = "<group>"; };
+		9E1461C117CB7CC200357057 /* ECVenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECVenueViewController.h; sourceTree = "<group>"; };
+		9E1461C217CB7CC200357057 /* ECVenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECVenueViewController.m; sourceTree = "<group>"; };
+		9E2104B617C729D3001F1392 /* Vision202Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Vision202Logo.png; path = ../../../../kishoremaramreddy/Downloads/Vision202Logo.png; sourceTree = "<group>"; };
+		9E2104BC17C79608001F1392 /* splash-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash-background.png"; path = "../../../../kishoremaramreddy/Downloads/splash-background.png"; sourceTree = "<group>"; };
+		9E239A6217B4F21F00DC6800 /* marriott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = marriott.jpg; path = ../../../../kishoremaramreddy/Downloads/marriott.jpg; sourceTree = "<group>"; };
+		9E239A6417B51B7300DC6800 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/calendar.png"; sourceTree = "<group>"; };
+		9E239A6817B51BB400DC6800 /* compose-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "compose-4.png"; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/compose-4.png"; sourceTree = "<group>"; };
+		9E239A6A17B51BFF00DC6800 /* settings-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-3.png"; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/settings-3.png"; sourceTree = "<group>"; };
+		9E239A6B17B51BFF00DC6800 /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = users.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/users.png"; sourceTree = "<group>"; };
+		9E239A7417B524DA00DC6800 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = ../../../../kishoremaramreddy/Downloads/info.png; sourceTree = "<group>"; };
+		9E239A7617B5252300DC6800 /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = question.png; path = ../../../../kishoremaramreddy/Downloads/question.png; sourceTree = "<group>"; };
+		9E239A7817B5294B00DC6800 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/star.png"; sourceTree = "<group>"; };
+		9E239A7A17B529A600DC6800 /* bullhorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullhorn.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/bullhorn.png"; sourceTree = "<group>"; };
+		9E239A7C17B52B0200DC6800 /* ECScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECScheduleTableViewController.h; sourceTree = "<group>"; };
+		9E239A7D17B52B0200DC6800 /* ECScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECScheduleTableViewController.m; sourceTree = "<group>"; };
+		9E239A7F17B52B1E00DC6800 /* ECWorkshopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECWorkshopTableViewController.h; sourceTree = "<group>"; };
+		9E239A8017B52B1F00DC6800 /* ECWorkshopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECWorkshopTableViewController.m; sourceTree = "<group>"; };
+		9E28B30E17AF847F0018E344 /* ECConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECConstants.h; sourceTree = "<group>"; };
+		9E28B30F17AF847F0018E344 /* ECConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECConstants.m; sourceTree = "<group>"; };
+		9E28B31117AFA5B50018E344 /* ECWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECWebService.h; sourceTree = "<group>"; };
+		9E28B31217AFA5B50018E344 /* ECWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECWebService.m; sourceTree = "<group>"; };
+		9E3DEBD117C8EB85008B674F /* splash-background-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash-background-dark.png"; path = "../../../../kishoremaramreddy/Downloads/splash-background-dark.png"; sourceTree = "<group>"; };
+		9E436C3817B1344000554D4E /* ECQuizTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECQuizTableViewController.h; sourceTree = "<group>"; };
+		9E436C3917B1344000554D4E /* ECQuizTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECQuizTableViewController.m; sourceTree = "<group>"; };
+		9E893CC217C4C5C300A2D905 /* ECMainHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainHeaderView.h; sourceTree = "<group>"; };
+		9E893CC317C4C5C300A2D905 /* ECMainHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainHeaderView.m; sourceTree = "<group>"; };
+		9E893CC917C4DEE500A2D905 /* ECGurukulViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGurukulViewController.h; sourceTree = "<group>"; };
+		9E893CCA17C4DEE500A2D905 /* ECGurukulViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGurukulViewController.m; sourceTree = "<group>"; };
+		9E893CCC17C4F33D00A2D905 /* ECAbstractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAbstractViewController.h; sourceTree = "<group>"; };
+		9E893CCD17C4F33D00A2D905 /* ECAbstractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAbstractViewController.m; sourceTree = "<group>"; };
+		9EA6EA4717C8E46C009773E9 /* dsge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dsge.png; path = ../../../../kishoremaramreddy/Downloads/mobisys/dsge.png; sourceTree = "<group>"; };
+		9EC4447317B215DE00BEC95F /* ECFacultyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECFacultyTableViewController.h; sourceTree = "<group>"; };
+		9EC4447417B215DE00BEC95F /* ECFacultyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECFacultyTableViewController.m; sourceTree = "<group>"; };
+		9EC4447617B2172C00BEC95F /* ECAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAddressViewController.h; sourceTree = "<group>"; };
+		9EC4447717B2172C00BEC95F /* ECAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAddressViewController.m; sourceTree = "<group>"; };
+		9EC4447917B21D1600BEC95F /* ECAboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAboutTableViewController.h; sourceTree = "<group>"; };
+		9EC4447A17B21D1600BEC95F /* ECAboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAboutTableViewController.m; sourceTree = "<group>"; };
+		9EC4447C17B225D300BEC95F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9EC4447E17B22ED600BEC95F /* ECVenueAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECVenueAnnotation.h; sourceTree = "<group>"; };
+		9EC4447F17B22ED600BEC95F /* ECVenueAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECVenueAnnotation.m; sourceTree = "<group>"; };
 		9EC5DB3B17AB9416008E5009 /* Endocon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Endocon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC5DB3E17AB9416008E5009 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9EC5DB4017AB9416008E5009 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,27 +138,29 @@
 		9EC5DB5A17AB9417008E5009 /* ECSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECSplashViewController.m; sourceTree = "<group>"; };
 		9EC5DB6717ABB51E008E5009 /* ECMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainViewController.h; sourceTree = "<group>"; };
 		9EC5DB6817ABB51E008E5009 /* ECMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainViewController.m; sourceTree = "<group>"; };
-		9EC5DB6A17ABB68D008E5009 /* ECAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAboutViewController.h; sourceTree = "<group>"; };
-		9EC5DB6B17ABB68D008E5009 /* ECAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAboutViewController.m; sourceTree = "<group>"; };
-		9EC5DB6D17ABB6D2008E5009 /* ECScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECScheduleViewController.h; sourceTree = "<group>"; };
-		9EC5DB6E17ABB6D2008E5009 /* ECScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECScheduleViewController.m; sourceTree = "<group>"; };
-		9EC5DB7017ABB6DF008E5009 /* ECWorkshopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECWorkshopViewController.h; sourceTree = "<group>"; };
-		9EC5DB7117ABB6DF008E5009 /* ECWorkshopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECWorkshopViewController.m; sourceTree = "<group>"; };
-		9EC5DB7317ABB6ED008E5009 /* ECFacultyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECFacultyViewController.h; sourceTree = "<group>"; };
-		9EC5DB7417ABB6ED008E5009 /* ECFacultyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECFacultyViewController.m; sourceTree = "<group>"; };
-		9EC5DB7617ABB6FF008E5009 /* ECQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECQuizViewController.h; sourceTree = "<group>"; };
-		9EC5DB7717ABB6FF008E5009 /* ECQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECQuizViewController.m; sourceTree = "<group>"; };
 		9EC5DB7F17ABBAFB008E5009 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "../../../../kishoremaramreddy/Downloads/ios-fontawesome-master/NSString+FontAwesome.h"; sourceTree = "<group>"; };
 		9EC5DB8017ABBAFB008E5009 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "../../../../kishoremaramreddy/Downloads/ios-fontawesome-master/NSString+FontAwesome.m"; sourceTree = "<group>"; };
 		9EC5DB8217ABBB15008E5009 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../../../../kishoremaramreddy/Downloads/ios-fontawesome-master/Resources/FontAwesome.ttf"; sourceTree = "<group>"; };
-		9EC5DB8417ABC046008E5009 /* ECMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainView.h; sourceTree = "<group>"; };
-		9EC5DB8517ABC047008E5009 /* ECMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainView.m; sourceTree = "<group>"; };
 		9EC5DB8717ABDFFB008E5009 /* ECMainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainViewCell.h; sourceTree = "<group>"; };
 		9EC5DB8817ABDFFB008E5009 /* ECMainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainViewCell.m; sourceTree = "<group>"; };
-		9EC5DB8A17ABE553008E5009 /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-icon.png"; path = "../../../../kishoremaramreddy/Downloads/settings-icon.png"; sourceTree = "<group>"; };
 		9EC5DB8C17ABEAAE008E5009 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../kishoremaramreddy/Downloads/logo.png; sourceTree = "<group>"; };
 		9EC5DB8E17AC0239008E5009 /* ECSuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSuggestionViewController.h; sourceTree = "<group>"; };
 		9EC5DB8F17AC0239008E5009 /* ECSuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSuggestionViewController.m; sourceTree = "<group>"; };
+		9EDB281417CA0654008CE5B7 /* ECCommitteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCommitteViewController.h; sourceTree = "<group>"; };
+		9EDB281517CA0654008CE5B7 /* ECCommitteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCommitteViewController.m; sourceTree = "<group>"; };
+		9EDB281717CA0A95008CE5B7 /* ECCommitteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCommitteCell.h; sourceTree = "<group>"; };
+		9EDB281817CA0A95008CE5B7 /* ECCommitteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCommitteCell.m; sourceTree = "<group>"; };
+		9EDB282017CA18C5008CE5B7 /* document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = document.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/document.png"; sourceTree = "<group>"; };
+		9EE67A3317C8A71600611732 /* ECRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECRegisterViewController.h; sourceTree = "<group>"; };
+		9EE67A3417C8A71600611732 /* ECRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECRegisterViewController.m; sourceTree = "<group>"; };
+		9EE67A3617C8E3E700611732 /* sgei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sgei.png; path = ../../../../kishoremaramreddy/Downloads/mobisys/sgei.png; sourceTree = "<group>"; };
+		9EE67A3817C8E3FB00611732 /* dmhrc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dmhrc.png; path = ../../../../kishoremaramreddy/Downloads/mobisys/dmhrc.png; sourceTree = "<group>"; };
+		9EEC3FB617B370AA00A09734 /* ECFacultyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECFacultyViewCell.h; sourceTree = "<group>"; };
+		9EEC3FB717B370AA00A09734 /* ECFacultyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECFacultyViewCell.m; sourceTree = "<group>"; };
+		9EEC3FB917B3A42500A09734 /* profile_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile_placeholder.png; path = ../../../../kishoremaramreddy/Downloads/profile_placeholder.png; sourceTree = "<group>"; };
+		9EEC3FD117B3E3BD00A09734 /* ECLoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginTableViewController.h; sourceTree = "<group>"; };
+		9EEC3FD217B3E3BE00A09734 /* ECLoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginTableViewController.m; sourceTree = "<group>"; };
+		9EF8E68817C8E49400D4E4BA /* psg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = psg.png; path = ../../../../kishoremaramreddy/Downloads/mobisys/psg.png; sourceTree = "<group>"; };
 		D643EE1AA98B4A2C864656AF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -83,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC4447D17B225D300BEC95F /* MapKit.framework in Frameworks */,
 				9EC5DB3F17AB9416008E5009 /* UIKit.framework in Frameworks */,
 				9EC5DB4117AB9416008E5009 /* Foundation.framework in Frameworks */,
 				9EC5DB4317AB9416008E5009 /* CoreGraphics.framework in Frameworks */,
@@ -93,9 +180,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E28B30D17AF84690018E344 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9E28B30E17AF847F0018E344 /* ECConstants.h */,
+				9E28B30F17AF847F0018E344 /* ECConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		9EC5DB3217AB9416008E5009 = {
 			isa = PBXGroup;
 			children = (
+				9EC4447C17B225D300BEC95F /* MapKit.framework */,
 				9EC5DB4417AB9416008E5009 /* Endocon */,
 				9EC5DB3D17AB9416008E5009 /* Frameworks */,
 				9EC5DB3C17AB9416008E5009 /* Products */,
@@ -125,6 +222,7 @@
 		9EC5DB4417AB9416008E5009 /* Endocon */ = {
 			isa = PBXGroup;
 			children = (
+				9E28B30D17AF84690018E344 /* Constants */,
 				9EC5DB6617AB962F008E5009 /* Libs */,
 				9EC5DB6517AB9607008E5009 /* Networking */,
 				9EC5DB6417AB95D9008E5009 /* Resources */,
@@ -163,10 +261,14 @@
 		9EC5DB6217AB95CC008E5009 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9EC5DB8417ABC046008E5009 /* ECMainView.h */,
-				9EC5DB8517ABC047008E5009 /* ECMainView.m */,
 				9EC5DB8717ABDFFB008E5009 /* ECMainViewCell.h */,
 				9EC5DB8817ABDFFB008E5009 /* ECMainViewCell.m */,
+				9EEC3FB617B370AA00A09734 /* ECFacultyViewCell.h */,
+				9EEC3FB717B370AA00A09734 /* ECFacultyViewCell.m */,
+				9E893CC217C4C5C300A2D905 /* ECMainHeaderView.h */,
+				9E893CC317C4C5C300A2D905 /* ECMainHeaderView.m */,
+				9EDB281717CA0A95008CE5B7 /* ECCommitteCell.h */,
+				9EDB281817CA0A95008CE5B7 /* ECCommitteCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -178,18 +280,38 @@
 				9EC5DB5A17AB9417008E5009 /* ECSplashViewController.m */,
 				9EC5DB6717ABB51E008E5009 /* ECMainViewController.h */,
 				9EC5DB6817ABB51E008E5009 /* ECMainViewController.m */,
-				9EC5DB6A17ABB68D008E5009 /* ECAboutViewController.h */,
-				9EC5DB6B17ABB68D008E5009 /* ECAboutViewController.m */,
-				9EC5DB6D17ABB6D2008E5009 /* ECScheduleViewController.h */,
-				9EC5DB6E17ABB6D2008E5009 /* ECScheduleViewController.m */,
-				9EC5DB7017ABB6DF008E5009 /* ECWorkshopViewController.h */,
-				9EC5DB7117ABB6DF008E5009 /* ECWorkshopViewController.m */,
-				9EC5DB7317ABB6ED008E5009 /* ECFacultyViewController.h */,
-				9EC5DB7417ABB6ED008E5009 /* ECFacultyViewController.m */,
-				9EC5DB7617ABB6FF008E5009 /* ECQuizViewController.h */,
-				9EC5DB7717ABB6FF008E5009 /* ECQuizViewController.m */,
 				9EC5DB8E17AC0239008E5009 /* ECSuggestionViewController.h */,
 				9EC5DB8F17AC0239008E5009 /* ECSuggestionViewController.m */,
+				9E436C3817B1344000554D4E /* ECQuizTableViewController.h */,
+				9E436C3917B1344000554D4E /* ECQuizTableViewController.m */,
+				9EC4447317B215DE00BEC95F /* ECFacultyTableViewController.h */,
+				9EC4447417B215DE00BEC95F /* ECFacultyTableViewController.m */,
+				9EC4447617B2172C00BEC95F /* ECAddressViewController.h */,
+				9EC4447717B2172C00BEC95F /* ECAddressViewController.m */,
+				9EC4447917B21D1600BEC95F /* ECAboutTableViewController.h */,
+				9EC4447A17B21D1600BEC95F /* ECAboutTableViewController.m */,
+				9EC4447E17B22ED600BEC95F /* ECVenueAnnotation.h */,
+				9EC4447F17B22ED600BEC95F /* ECVenueAnnotation.m */,
+				9EEC3FD117B3E3BD00A09734 /* ECLoginTableViewController.h */,
+				9EEC3FD217B3E3BE00A09734 /* ECLoginTableViewController.m */,
+				9E239A7C17B52B0200DC6800 /* ECScheduleTableViewController.h */,
+				9E239A7D17B52B0200DC6800 /* ECScheduleTableViewController.m */,
+				9E239A7F17B52B1E00DC6800 /* ECWorkshopTableViewController.h */,
+				9E239A8017B52B1F00DC6800 /* ECWorkshopTableViewController.m */,
+				9E893CC917C4DEE500A2D905 /* ECGurukulViewController.h */,
+				9E893CCA17C4DEE500A2D905 /* ECGurukulViewController.m */,
+				9E893CCC17C4F33D00A2D905 /* ECAbstractViewController.h */,
+				9E893CCD17C4F33D00A2D905 /* ECAbstractViewController.m */,
+				9EE67A3317C8A71600611732 /* ECRegisterViewController.h */,
+				9EE67A3417C8A71600611732 /* ECRegisterViewController.m */,
+				9EDB281417CA0654008CE5B7 /* ECCommitteViewController.h */,
+				9EDB281517CA0654008CE5B7 /* ECCommitteViewController.m */,
+				9E1461B817CB6F3800357057 /* ECNewsViewController.h */,
+				9E1461B917CB6F3800357057 /* ECNewsViewController.m */,
+				9E1461BE17CB774F00357057 /* ECContactViewController.h */,
+				9E1461BF17CB774F00357057 /* ECContactViewController.m */,
+				9E1461C117CB7CC200357057 /* ECVenueViewController.h */,
+				9E1461C217CB7CC200357057 /* ECVenueViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -197,9 +319,16 @@
 		9EC5DB6417AB95D9008E5009 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9EC5DB8C17ABEAAE008E5009 /* logo.png */,
-				9EC5DB8A17ABE553008E5009 /* settings-icon.png */,
-				9EC5DB8217ABBB15008E5009 /* FontAwesome.ttf */,
+				9E3DEBD117C8EB85008B674F /* splash-background-dark.png */,
+				9EF8E68817C8E49400D4E4BA /* psg.png */,
+				9EA6EA4717C8E46C009773E9 /* dsge.png */,
+				9EE67A3817C8E3FB00611732 /* dmhrc.png */,
+				9EE67A3617C8E3E700611732 /* sgei.png */,
+				9E2104BC17C79608001F1392 /* splash-background.png */,
+				9E239A6217B4F21F00DC6800 /* marriott.jpg */,
+				9E2104B617C729D3001F1392 /* Vision202Logo.png */,
+				9EEC3FCC17B3CC8600A09734 /* Font */,
+				9EEC3FCB17B3CC6F00A09734 /* Images */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -207,6 +336,8 @@
 		9EC5DB6517AB9607008E5009 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				9E28B31117AFA5B50018E344 /* ECWebService.h */,
+				9E28B31217AFA5B50018E344 /* ECWebService.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -218,6 +349,36 @@
 				9EC5DB8017ABBAFB008E5009 /* NSString+FontAwesome.m */,
 			);
 			name = Libs;
+			sourceTree = "<group>";
+		};
+		9EEC3FCB17B3CC6F00A09734 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9E1461B017CB6BF500357057 /* envelope.png */,
+				9E1461AE17CB6BA100357057 /* map.png */,
+				9E1461AC17CB6B7A00357057 /* microphone.png */,
+				9E1461A817CB6A9600357057 /* newspaper.png */,
+				9EDB282017CA18C5008CE5B7 /* document.png */,
+				9E239A7A17B529A600DC6800 /* bullhorn.png */,
+				9E239A7817B5294B00DC6800 /* star.png */,
+				9E239A7617B5252300DC6800 /* question.png */,
+				9E239A7417B524DA00DC6800 /* info.png */,
+				9E239A6A17B51BFF00DC6800 /* settings-3.png */,
+				9E239A6B17B51BFF00DC6800 /* users.png */,
+				9E239A6817B51BB400DC6800 /* compose-4.png */,
+				9E239A6417B51B7300DC6800 /* calendar.png */,
+				9EEC3FB917B3A42500A09734 /* profile_placeholder.png */,
+				9EC5DB8C17ABEAAE008E5009 /* logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		9EEC3FCC17B3CC8600A09734 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5DB8217ABBB15008E5009 /* FontAwesome.ttf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,8 +441,29 @@
 				9EC5DB5517AB9417008E5009 /* Default-568h@2x.png in Resources */,
 				9EC5DB5817AB9417008E5009 /* iPhone.storyboard in Resources */,
 				9EC5DB8317ABBB15008E5009 /* FontAwesome.ttf in Resources */,
-				9EC5DB8B17ABE553008E5009 /* settings-icon.png in Resources */,
 				9EC5DB8D17ABEAAE008E5009 /* logo.png in Resources */,
+				9EEC3FBA17B3A42500A09734 /* profile_placeholder.png in Resources */,
+				9E239A6317B4F21F00DC6800 /* marriott.jpg in Resources */,
+				9E239A6517B51B7300DC6800 /* calendar.png in Resources */,
+				9E239A6917B51BB400DC6800 /* compose-4.png in Resources */,
+				9E239A6C17B51BFF00DC6800 /* settings-3.png in Resources */,
+				9E239A6D17B51BFF00DC6800 /* users.png in Resources */,
+				9E239A7517B524DA00DC6800 /* info.png in Resources */,
+				9E239A7717B5252300DC6800 /* question.png in Resources */,
+				9E239A7917B5294B00DC6800 /* star.png in Resources */,
+				9E239A7B17B529A600DC6800 /* bullhorn.png in Resources */,
+				9E2104B717C729D3001F1392 /* Vision202Logo.png in Resources */,
+				9E2104BD17C79608001F1392 /* splash-background.png in Resources */,
+				9EE67A3717C8E3E700611732 /* sgei.png in Resources */,
+				9EE67A3917C8E3FB00611732 /* dmhrc.png in Resources */,
+				9EA6EA4817C8E46C009773E9 /* dsge.png in Resources */,
+				9EF8E68917C8E49400D4E4BA /* psg.png in Resources */,
+				9E3DEBD217C8EB85008B674F /* splash-background-dark.png in Resources */,
+				9EDB282117CA18C5008CE5B7 /* document.png in Resources */,
+				9E1461A917CB6A9600357057 /* newspaper.png in Resources */,
+				9E1461AD17CB6B7A00357057 /* microphone.png in Resources */,
+				9E1461AF17CB6BA100357057 /* map.png in Resources */,
+				9E1461B117CB6BF500357057 /* envelope.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,15 +511,29 @@
 				9EC5DB4F17AB9416008E5009 /* ECAppDelegate.m in Sources */,
 				9EC5DB5B17AB9417008E5009 /* ECSplashViewController.m in Sources */,
 				9EC5DB6917ABB51E008E5009 /* ECMainViewController.m in Sources */,
-				9EC5DB6C17ABB68D008E5009 /* ECAboutViewController.m in Sources */,
-				9EC5DB6F17ABB6D2008E5009 /* ECScheduleViewController.m in Sources */,
-				9EC5DB7217ABB6DF008E5009 /* ECWorkshopViewController.m in Sources */,
-				9EC5DB7517ABB6ED008E5009 /* ECFacultyViewController.m in Sources */,
-				9EC5DB7817ABB6FF008E5009 /* ECQuizViewController.m in Sources */,
 				9EC5DB8117ABBAFB008E5009 /* NSString+FontAwesome.m in Sources */,
-				9EC5DB8617ABC047008E5009 /* ECMainView.m in Sources */,
 				9EC5DB8917ABDFFB008E5009 /* ECMainViewCell.m in Sources */,
 				9EC5DB9017AC0239008E5009 /* ECSuggestionViewController.m in Sources */,
+				9E28B31017AF847F0018E344 /* ECConstants.m in Sources */,
+				9E28B31317AFA5B50018E344 /* ECWebService.m in Sources */,
+				9E436C3A17B1344000554D4E /* ECQuizTableViewController.m in Sources */,
+				9EC4447517B215DE00BEC95F /* ECFacultyTableViewController.m in Sources */,
+				9EC4447817B2172C00BEC95F /* ECAddressViewController.m in Sources */,
+				9EC4447B17B21D1600BEC95F /* ECAboutTableViewController.m in Sources */,
+				9EC4448017B22ED600BEC95F /* ECVenueAnnotation.m in Sources */,
+				9EEC3FB817B370AA00A09734 /* ECFacultyViewCell.m in Sources */,
+				9EEC3FD317B3E3BE00A09734 /* ECLoginTableViewController.m in Sources */,
+				9E239A7E17B52B0200DC6800 /* ECScheduleTableViewController.m in Sources */,
+				9E239A8117B52B1F00DC6800 /* ECWorkshopTableViewController.m in Sources */,
+				9E893CC417C4C5C300A2D905 /* ECMainHeaderView.m in Sources */,
+				9E893CCB17C4DEE500A2D905 /* ECGurukulViewController.m in Sources */,
+				9E893CCE17C4F33D00A2D905 /* ECAbstractViewController.m in Sources */,
+				9EE67A3517C8A71600611732 /* ECRegisterViewController.m in Sources */,
+				9EDB281617CA0654008CE5B7 /* ECCommitteViewController.m in Sources */,
+				9EDB281917CA0A95008CE5B7 /* ECCommitteCell.m in Sources */,
+				9E1461BA17CB6F3800357057 /* ECNewsViewController.m in Sources */,
+				9E1461C017CB774F00357057 /* ECContactViewController.m in Sources */,
+				9E1461C317CB7CC200357057 /* ECVenueViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +571,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: stuart fry (5T56ZQLGF4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: stuart fry (5T56ZQLGF4)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -388,8 +585,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -412,7 +611,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

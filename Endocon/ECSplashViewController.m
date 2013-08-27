@@ -7,8 +7,11 @@
 //
 
 #import "ECSplashViewController.h"
+#import "ECConstants.h"
 
 @interface ECSplashViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *visionImageView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *splashImageView;
 
@@ -20,13 +23,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(showMainScreen) userInfo:nil repeats:NO];
+    
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(showMainScreen) userInfo:nil repeats:NO];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    CGRect destLogoFrame = self.splashImageView.frame;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"splash-background-dark.png"]];
+    self.splashImageView.frame = CGRectMake(destLogoFrame.origin.x+destLogoFrame.size.width, destLogoFrame.origin.y, destLogoFrame.size.width, destLogoFrame.size.height);
+    
+    [UIView animateWithDuration:1
+                     animations:^{
+                         self.splashImageView.frame = destLogoFrame;                   }
+                     completion:^(BOOL finished) {
+                         
+                     }];
+    
 }
 
 - (void)showMainScreen
 {
-    UINavigationController *navController = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"navController"];
-    [self presentViewController:navController animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"showNavController" sender:self];
 }
 
 - (void)didReceiveMemoryWarning
