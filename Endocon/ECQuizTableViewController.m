@@ -55,6 +55,7 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"Inside view load");
     // Hide submit button
     self.submitButton.hidden = YES;
     // Set title
@@ -85,8 +86,8 @@
 - (void)getQuiz
 {
     MKNetworkOperation *getWeeklyQuizOperation = [ [ECConstants sharedEngine] getWeeklyQuizWithCompletionHandler:^(NSDictionary *quizResponse) {
-        
         if ([quizResponse objectForKey:@"question"] && [quizResponse objectForKey:@"options"] && quizResponse[@"question"] && quizResponse[@"options"]) {
+            
             question = quizResponse[@"question"];
             options = quizResponse[@"options"];
             imagePath = quizResponse[@"image"];
@@ -152,8 +153,6 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    [self.tableView setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning
@@ -180,7 +179,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"count = %d", [options count]);
+    NSLog(@"%d", [options count]);
     return [options count];
 }
 
@@ -262,7 +261,6 @@
     }
     alertView.titleLabel.text = title;
     alertView.messageLabel.text = message;
-    alertView.alertContainer.backgroundColor = [ECConstants webRedColor];
     [alertView show];
 }
 

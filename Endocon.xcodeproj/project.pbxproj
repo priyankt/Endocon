@@ -32,7 +32,8 @@
 		9E28B31317AFA5B50018E344 /* ECWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E28B31217AFA5B50018E344 /* ECWebService.m */; };
 		9E3DEBD217C8EB85008B674F /* splash-background-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3DEBD117C8EB85008B674F /* splash-background-dark.png */; };
 		9E436C3A17B1344000554D4E /* ECQuizTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E436C3917B1344000554D4E /* ECQuizTableViewController.m */; };
-		9E893CC417C4C5C300A2D905 /* ECMainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E893CC317C4C5C300A2D905 /* ECMainHeaderView.m */; };
+		9E544A0517CCB571005DA968 /* ECMainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E544A0417CCB571005DA968 /* ECMainHeaderView.m */; };
+		9E544A0717CCF993005DA968 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E544A0617CCF993005DA968 /* pin.png */; };
 		9E893CCB17C4DEE500A2D905 /* ECGurukulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E893CCA17C4DEE500A2D905 /* ECGurukulViewController.m */; };
 		9E893CCE17C4F33D00A2D905 /* ECAbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E893CCD17C4F33D00A2D905 /* ECAbstractViewController.m */; };
 		9EA6EA4817C8E46C009773E9 /* dsge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA6EA4717C8E46C009773E9 /* dsge.png */; };
@@ -104,8 +105,9 @@
 		9E3DEBD117C8EB85008B674F /* splash-background-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash-background-dark.png"; path = "../../../../kishoremaramreddy/Downloads/splash-background-dark.png"; sourceTree = "<group>"; };
 		9E436C3817B1344000554D4E /* ECQuizTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECQuizTableViewController.h; sourceTree = "<group>"; };
 		9E436C3917B1344000554D4E /* ECQuizTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECQuizTableViewController.m; sourceTree = "<group>"; };
-		9E893CC217C4C5C300A2D905 /* ECMainHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainHeaderView.h; sourceTree = "<group>"; };
-		9E893CC317C4C5C300A2D905 /* ECMainHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainHeaderView.m; sourceTree = "<group>"; };
+		9E544A0317CCB571005DA968 /* ECMainHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMainHeaderView.h; sourceTree = "<group>"; };
+		9E544A0417CCB571005DA968 /* ECMainHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMainHeaderView.m; sourceTree = "<group>"; };
+		9E544A0617CCF993005DA968 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = "../../../../kishoremaramreddy/Downloads/Batch-master 2/PNG/64x64/pin.png"; sourceTree = "<group>"; };
 		9E893CC917C4DEE500A2D905 /* ECGurukulViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGurukulViewController.h; sourceTree = "<group>"; };
 		9E893CCA17C4DEE500A2D905 /* ECGurukulViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGurukulViewController.m; sourceTree = "<group>"; };
 		9E893CCC17C4F33D00A2D905 /* ECAbstractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAbstractViewController.h; sourceTree = "<group>"; };
@@ -265,10 +267,10 @@
 				9EC5DB8817ABDFFB008E5009 /* ECMainViewCell.m */,
 				9EEC3FB617B370AA00A09734 /* ECFacultyViewCell.h */,
 				9EEC3FB717B370AA00A09734 /* ECFacultyViewCell.m */,
-				9E893CC217C4C5C300A2D905 /* ECMainHeaderView.h */,
-				9E893CC317C4C5C300A2D905 /* ECMainHeaderView.m */,
 				9EDB281717CA0A95008CE5B7 /* ECCommitteCell.h */,
 				9EDB281817CA0A95008CE5B7 /* ECCommitteCell.m */,
+				9E544A0317CCB571005DA968 /* ECMainHeaderView.h */,
+				9E544A0417CCB571005DA968 /* ECMainHeaderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -354,6 +356,7 @@
 		9EEC3FCB17B3CC6F00A09734 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9E544A0617CCF993005DA968 /* pin.png */,
 				9E1461B017CB6BF500357057 /* envelope.png */,
 				9E1461AE17CB6BA100357057 /* map.png */,
 				9E1461AC17CB6B7A00357057 /* microphone.png */,
@@ -464,6 +467,7 @@
 				9E1461AD17CB6B7A00357057 /* microphone.png in Resources */,
 				9E1461AF17CB6BA100357057 /* map.png in Resources */,
 				9E1461B117CB6BF500357057 /* envelope.png in Resources */,
+				9E544A0717CCF993005DA968 /* pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +529,6 @@
 				9EEC3FD317B3E3BE00A09734 /* ECLoginTableViewController.m in Sources */,
 				9E239A7E17B52B0200DC6800 /* ECScheduleTableViewController.m in Sources */,
 				9E239A8117B52B1F00DC6800 /* ECWorkshopTableViewController.m in Sources */,
-				9E893CC417C4C5C300A2D905 /* ECMainHeaderView.m in Sources */,
 				9E893CCB17C4DEE500A2D905 /* ECGurukulViewController.m in Sources */,
 				9E893CCE17C4F33D00A2D905 /* ECAbstractViewController.m in Sources */,
 				9EE67A3517C8A71600611732 /* ECRegisterViewController.m in Sources */,
@@ -534,6 +537,7 @@
 				9E1461BA17CB6F3800357057 /* ECNewsViewController.m in Sources */,
 				9E1461C017CB774F00357057 /* ECContactViewController.m in Sources */,
 				9E1461C317CB7CC200357057 /* ECVenueViewController.m in Sources */,
+				9E544A0517CCB571005DA968 /* ECMainHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

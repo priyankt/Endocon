@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong) NSArray *menuItems;
 @property (strong, nonatomic) NSString *winnerText;
+@property (weak, nonatomic) IBOutlet UILabel *winnerTextLabel;
 
 @end
 
@@ -65,7 +66,7 @@
         [SVProgressHUD dismiss];
         if (winnerText && winnerText.length > 0) {
             NSLog(@"%@", winnerText);
-            self.winnerText = winnerText;
+            [self updateWinnerText:winnerText];
         }
     } errorHandler:^(NSError *error){
         [SVProgressHUD dismiss];
@@ -76,6 +77,14 @@
     [[ECConstants sharedEngine] enqueueOperation:getWinnerOperation];
 }
 
+- (void)updateWinnerText:(NSString *)winnerText
+{
+    NSLog(@"Winner = %@", winnerText);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.winnerTextLabel.text = winnerText;
+    });
+}
+
 - (void)configureUI
 {
     //self.title = @"Endocon 2014";
@@ -83,11 +92,16 @@
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"splash-background.png"]];
+    
+    self.winnerTextLabel.font = [UIFont boldFlatFontOfSize:[ECConstants textSize]];
+    self.winnerTextLabel.textColor = [ECConstants webRedColor];
+
     //self.view.backgroundColor = [UIColor colorFromHexCode:@"#c2eafb"];
     //self.collectionView.backgroundColor = [UIColor whiteColor];
     self.menuItems = [ NSArray arrayWithObjects:
-                        @{@"image":@"question.png",@"title":@"Quiz",@"segue":@"showQuiz"},@{@"image":@"document.png",@"title":@"Abstract",@"segue":@"showAbstract"},@{@"image":@"calendar.png",@"title":@"Schedule",@"segue":@"showSchedule"},@{@"image":@"settings-3.png",@"title":@"Training",@"segue":@"showWorkshop"},@{@"image":@"star.png",@"title":@"Gurukul",@"segue":@"showGurukul"},@{@"image":@"microphone.png",@"title":@"Faculty",@"segue":@"showFaculty"},@{@"image":@"users.png",@"title":@"Committe",@"segue":@"showCommitte"},@{@"image":@"info.png",@"title":@"About",@"segue":@"showAbout"},@{@"image":@"compose-4.png",@"title":@"Suggestions",@"segue":@"showSuggestion"}, @{@"image":@"map.png",@"title":@"Venue",@"segue":@"showVenue"}, @{@"image":@"envelope.png",@"title":@"Contact",@"segue":@"showContact"}, @{@"image":@"newspaper.png",@"title":@"News",@"segue":@"showNews"}, nil
+                        @{@"image":@"question.png",@"title":@"Quiz",@"segue":@"showQuiz"},@{@"image":@"document.png",@"title":@"Abstract",@"segue":@"showAbstract"},@{@"image":@"calendar.png",@"title":@"Schedule",@"segue":@"showSchedule"},@{@"image":@"settings-3.png",@"title":@"Training",@"segue":@"showWorkshop"},@{@"image":@"star.png",@"title":@"Gurukul",@"segue":@"showGurukul"},@{@"image":@"microphone.png",@"title":@"Faculty",@"segue":@"showFaculty"},@{@"image":@"users.png",@"title":@"Committe",@"segue":@"showCommitte"},@{@"image":@"info.png",@"title":@"About",@"segue":@"showAbout"},@{@"image":@"compose-4.png",@"title":@"Suggestions",@"segue":@"showSuggestion"}, @{@"image":@"pin.png",@"title":@"Venue",@"segue":@"showVenue"}, @{@"image":@"envelope.png",@"title":@"Contact",@"segue":@"showContact"}, @{@"image":@"newspaper.png",@"title":@"News",@"segue":@"showNews"}, nil
                       ];
     
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:[ECConstants titleSize]]};
@@ -120,6 +134,7 @@
     [self performSegueWithIdentifier:self.menuItems[indexPath.item][@"segue"] sender:self];
 }
 
+/*
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     ECMainHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"collectionViewHeader" forIndexPath:indexPath];
@@ -135,7 +150,7 @@
     
     return headerView;
 }
-
+*/
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

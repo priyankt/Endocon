@@ -36,7 +36,7 @@
     self.title = @"Faculty";
     [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-background.png"]]];
     
-    faculty = [[NSArray alloc] initWithObjects:@{@"image":@"",@"title":@"Dr. Pinghong Zhou",@"subtitle":@"China"}, @{@"image":@"",@"title":@"Dr. Shyam Varadarajulu",@"subtitle":@"USA"}, nil];
+    faculty = [[NSArray alloc] initWithObjects:@{@"image":@"",@"title":@"Dr. Pinghong Zhou",@"subtitle":@"China"}, @{@"image":@"",@"title":@"Dr. Shyam Varadarajulu",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Akihiro Araki",@"subtitle":@"Japan"}, @{@"image":@"",@"title":@"Prof. Ram Chuttani",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Kapil Gupta",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Pradermchai Kongkam,",@"subtitle":@"Thailand"}, @{@"image":@"",@"title":@"Prof. Jong Hu Moon",@"subtitle":@"South Korea"}, @{@"image":@"",@"title":@"Prof. Rungsun Rerknimitr",@"subtitle":@"Thailand"}, @{@"image":@"",@"title":@"Prof. Peter Siersema",@"subtitle":@"Netherlands"}, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,20 +69,24 @@
         cell.facultyImageView.image = [UIImage imageNamed:facultyData[@"image"]];
     }
     
+    /*
     cell.facultyImageView.layer.cornerRadius = 5;
     cell.facultyImageView.layer.shadowColor = [[UIColor blackColor] CGColor];
     cell.facultyImageView.layer.shadowOffset = CGSizeMake(0, 1);
     cell.facultyImageView.layer.shadowOpacity = 1;
     cell.facultyImageView.layer.shadowRadius = 5;
     cell.facultyImageView.clipsToBounds = NO;
+     */
     
     cell.facultyTitleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants titleSize]];
     cell.facultyTitleLabel.text = facultyData[@"title"];
-    [cell.facultyTitleLabel sizeToFit];
+    //cell.facultyTitleLabel.preferredMaxLayoutWidth = cell.facultyTitleLabel.frame.size.width;
+    //[cell.facultyTitleLabel sizeToFit];
 
     cell.facultySubtitleLabel.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     cell.facultySubtitleLabel.text = facultyData[@"subtitle"];
-    [cell.facultySubtitleLabel sizeToFit];
+    //cell.facultySubtitleLabel.preferredMaxLayoutWidth = cell.facultySubtitleLabel.frame.size.width;
+    //[cell.facultySubtitleLabel sizeToFit];
     
     return cell;
 }

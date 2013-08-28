@@ -69,20 +69,21 @@
         cell.imageView.image = [UIImage imageNamed:committeData[@"image"]];
     }
     
+    /*
     cell.imageView.layer.cornerRadius = 5;
     cell.imageView.layer.shadowColor = [[UIColor blackColor] CGColor];
     cell.imageView.layer.shadowOffset = CGSizeMake(0, 1);
     cell.imageView.layer.shadowOpacity = 1;
     cell.imageView.layer.shadowRadius = 5;
     cell.imageView.clipsToBounds = NO;
-    
+    */
     cell.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants titleSize]];
     cell.titleLabel.text = committeData[@"title"];
-    [cell.titleLabel sizeToFit];
+    //[cell.titleLabel sizeToFit];
     
     cell.subtitleLabel.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     cell.subtitleLabel.text = committeData[@"subtitle"];
-    [cell.subtitleLabel sizeToFit];
+    //[cell.subtitleLabel sizeToFit];
     
     return cell;
 
