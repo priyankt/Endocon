@@ -16,8 +16,8 @@
 @interface ECQuizTableViewController ()
 
 @property (weak, nonatomic) IBOutlet FUIButton *submitButton;
-@property (weak, nonatomic) IBOutlet UIImageView *quizImageView;
-@property (weak, nonatomic) IBOutlet UILabel *quizLabel;
+//@property (weak, nonatomic) IBOutlet UIImageView *quizImageView;
+//@property (weak, nonatomic) IBOutlet UILabel *quizLabel;
 
 @end
 
@@ -38,19 +38,6 @@
     return self;
 }
 
-/*
-- (id)initWithCoder:(NSCoder*)aDecoder
-{
-    if(self = [super initWithCoder:aDecoder])
-    {
-        NSLog(@"init coder");
-        [self getQuiz];
-    }
-    
-    return self;
-}
- */
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -61,7 +48,7 @@
     // Set title
     self.title = @"Weekly Quiz";
     // set background image
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-background.png"]]];
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:[ECConstants lightBackgroundImageName]]]];
     [self configureAlertView];
     // Get quiz
     [self getQuiz];
@@ -99,6 +86,7 @@
             [self.tableView reloadData];
             // Set display
             [self configureUI];
+            [self.view setNeedsDisplay];
         }
         else {
             [self displayAlertWithMessage:@"Error obtaining Quiz. Please try again." succes:0];
@@ -112,39 +100,56 @@
     }];
     
     [[ECConstants sharedEngine] enqueueOperation:getWeeklyQuizOperation];
-    [SVProgressHUD showWithStatus:@"Loading.." maskType:SVProgressHUDMaskTypeGradient];
+    [SVProgressHUD showWithStatus:@"Loading Quiz.." maskType:SVProgressHUDMaskTypeGradient];
 }
 
 - (void)configureUI
 {
-    self.quizLabel.font= [UIFont flatFontOfSize:[ECConstants titleSize]];
-    self.quizLabel.text = question;
-    self.quizLabel.preferredMaxLayoutWidth = self.quizLabel.frame.size.width;
-    [self.quizLabel sizeToFit];
+    UILabel *quizLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, self.view.frame.size.width-10, 21)];
+    quizLabel.numberOfLines = 0;
+    quizLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    quizLabel.backgroundColor = [UIColor clearColor];
+    
+    quizLabel.font= [UIFont flatFontOfSize:[ECConstants titleSize]];
+    quizLabel.text = question;
+    quizLabel.preferredMaxLayoutWidth = quizLabel.frame.size.width;
+    [quizLabel sizeToFit];
     
     CGFloat headerHeight = 0;
-    headerHeight += self.quizLabel.frame.origin.y + self.quizLabel.frame.size.height;
+    headerHeight += quizLabel.frame.origin.y + quizLabel.frame.size.height;
     
-    NSLog(@"%@", imagePath);
+    UIImageView *quizImageView = nil;
     if (imagePath && imagePath.length > 0) {
-        NSString *baseUrl = [ECConstants baseURL];
-        self.quizImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[baseUrl stringByAppendingString:imagePath]]]];
-        self.quizImageView.contentMode = UIViewContentModeScaleAspectFit;
-        headerHeight += self.quizImageView.frame.size.height;
-    }
-    else {
-        [self.quizImageView removeFromSuperview];
+        NSString *baseUrl = @"http://www.endocon2014.com/";
+        quizImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, headerHeight, self.view.frame.size.width-20, 180)];
+        quizImageView.contentMode = UIViewContentModeScaleAspectFit;
+        [[ECConstants sharedEngine] imageAtURL:[NSURL URLWithString:[baseUrl stringByAppendingString:imagePath]] completionHandler:^(UIImage *fetchedImage, NSURL *url, BOOL isInCache) {
+            quizImageView.image = fetchedImage;
+        } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+            [self displayAlertWithMessage:error.localizedDescription succes:NO];
+        }];
+        headerHeight += quizImageView.frame.size.height;
     }
     
-    UIView *headerView = [self.quizLabel superview];
-    headerView.frame = CGRectMake(headerView.frame.origin.x, headerView.frame.origin.y, headerView.frame.size.width, headerHeight + 20);
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, headerHeight)];
+    headerView.backgroundColor = [UIColor clearColor];
+    [headerView addSubview:quizLabel];
+    if (quizImageView) {
+        [headerView addSubview:quizImageView];
+    }
+    
+    [self.tableView setTableHeaderView:headerView];
+    
+//    [headerView addSubview:quizLabel];
+//    [headerView addSubview:quizImageView];
+
+//    headerView.frame = CGRectMake(headerView.frame.origin.x, headerView.frame.origin.y, headerView.frame.size.width, headerHeight + 20);
+    NSLog(@"%f, %f, %f, %f", self.tableView.tableHeaderView.frame.origin.x, self.tableView.tableHeaderView.frame.origin.y, self.tableView.tableHeaderView.frame.size.width, self.tableView.tableHeaderView.frame.size.height);
     
     //[[UILabel appearanceWhenContainedIn:[UITableViewHeaderFooterView class], nil] setFont:[UIFont boldFlatFontOfSize:[ECConstants titleSize]]];
     //[[UILabel appearanceWhenContainedIn:[UITableViewHeaderFooterView class], nil] setColor:[UIColor blackColor]];
     
     self.submitButton.buttonColor = [ECConstants webBlueColor];
-    self.submitButton.cornerRadius = 6.0f;
-    self.submitButton.shadowHeight = 3.0f;
     self.submitButton.cornerRadius = 6.0f;
     [self.submitButton setTitle:@"Submit Answer" forState:UIControlStateNormal];
     self.submitButton.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants buttonTextSize]];
@@ -261,6 +266,8 @@
     }
     alertView.titleLabel.text = title;
     alertView.messageLabel.text = message;
+    alertView.alertContainer.backgroundColor = backgroundColor
+    ;
     [alertView show];
 }
 

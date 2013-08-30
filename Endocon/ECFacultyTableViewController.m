@@ -34,9 +34,9 @@
 {
     [super viewDidLoad];
     self.title = @"Faculty";
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-background.png"]]];
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:[ECConstants lightBackgroundImageName]]]];
     
-    faculty = [[NSArray alloc] initWithObjects:@{@"image":@"",@"title":@"Dr. Pinghong Zhou",@"subtitle":@"China"}, @{@"image":@"",@"title":@"Dr. Shyam Varadarajulu",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Akihiro Araki",@"subtitle":@"Japan"}, @{@"image":@"",@"title":@"Prof. Ram Chuttani",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Kapil Gupta",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Pradermchai Kongkam,",@"subtitle":@"Thailand"}, @{@"image":@"",@"title":@"Prof. Jong Hu Moon",@"subtitle":@"South Korea"}, @{@"image":@"",@"title":@"Prof. Rungsun Rerknimitr",@"subtitle":@"Thailand"}, @{@"image":@"",@"title":@"Prof. Peter Siersema",@"subtitle":@"Netherlands"}, nil];
+    faculty = [[NSArray alloc] initWithObjects:@{@"image":@"",@"title":@"Dr. Pinghong Zhou",@"subtitle":@"China"}, @{@"image":@"",@"title":@"Dr. Shyam Varadarajulu",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Akihiro Araki",@"subtitle":@"Japan"}, @{@"image":@"",@"title":@"Prof. Ram Chuttani",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Kapil Gupta",@"subtitle":@"USA"}, @{@"image":@"",@"title":@"Prof. Pradermchai Kongkam",@"subtitle":@"Thailand"}, @{@"image":@"JongHMoon.png",@"title":@"Prof. Jong Hu Moon",@"subtitle":@"South Korea"}, @{@"image":@"",@"title":@"Prof. Rungsun Rerknimitr",@"subtitle":@"Thailand"}, @{@"image":@"PSiersema.png",@"title":@"Prof. Peter Siersema",@"subtitle":@"Netherlands"}, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,6 +65,7 @@
     ECFacultyViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSDictionary *facultyData = faculty[indexPath.row];
+    cell.facultyImageView.image = [UIImage imageNamed:@"profile_placeholder.png"];
     if ([facultyData[@"image"] length] > 0) {
         cell.facultyImageView.image = [UIImage imageNamed:facultyData[@"image"]];
     }
@@ -80,13 +81,13 @@
     
     cell.facultyTitleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants titleSize]];
     cell.facultyTitleLabel.text = facultyData[@"title"];
-    //cell.facultyTitleLabel.preferredMaxLayoutWidth = cell.facultyTitleLabel.frame.size.width;
-    //[cell.facultyTitleLabel sizeToFit];
+    cell.facultyTitleLabel.preferredMaxLayoutWidth = cell.facultyTitleLabel.frame.size.width;
+    [cell.facultyTitleLabel sizeToFit];
 
     cell.facultySubtitleLabel.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     cell.facultySubtitleLabel.text = facultyData[@"subtitle"];
-    //cell.facultySubtitleLabel.preferredMaxLayoutWidth = cell.facultySubtitleLabel.frame.size.width;
-    //[cell.facultySubtitleLabel sizeToFit];
+    cell.facultySubtitleLabel.preferredMaxLayoutWidth = cell.facultySubtitleLabel.frame.size.width;
+    [cell.facultySubtitleLabel sizeToFit];
     
     return cell;
 }

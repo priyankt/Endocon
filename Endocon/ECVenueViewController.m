@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
     self.title = @"Venue";
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-background.png"]]];
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:[ECConstants lightBackgroundImageName]]]];
     self.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants titleSize]];
     self.subtitleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants textSize]];
 

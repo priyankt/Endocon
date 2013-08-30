@@ -37,7 +37,7 @@
     self.title = @"News";
     self.newsWebView.delegate = self;
     [self.newsWebView setOpaque:NO];
-    self.newsWebView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"splash-background.png"]];
+    self.newsWebView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[ECConstants lightBackgroundImageName]]];
     
     [[self.newsWebView scrollView] setBounces:NO];
     //NSString *news = @"<span style='text-align:justify;font-family:Lato-Bold;font-size:16px;'><p><ul><li>Follow and participate in the weekly quiz to win attractive prizes</li><li>Do wait for our Endocon Mobile Apps - coming soon!</li><li>For more innovative ideas and updates - do wait for our Twitter and FB page- coming soon!</li></ul></p></span>";
@@ -70,7 +70,6 @@
     alertView.defaultButtonShadowColor = [UIColor asbestosColor];
     alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:[ECConstants buttonTextSize]];
     alertView.defaultButtonTitleColor = [UIColor asbestosColor];
-
 }
 
 - (void)didReceiveMemoryWarning

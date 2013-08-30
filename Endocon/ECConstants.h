@@ -19,6 +19,8 @@
 + (NSString *) baseURL;
 + (UIColor *)webBlueColor;
 + (UIColor *)webRedColor;
++ (NSString *)backgroundImageName;
++ (NSString *)lightBackgroundImageName;
 
 + (ECWebService *) sharedEngine;
 

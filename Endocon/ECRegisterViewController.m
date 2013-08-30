@@ -48,25 +48,28 @@
 
 - (void)configureUI
 {
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-background.png"]]];
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:[ECConstants lightBackgroundImageName]]]];
     
+    self.nameTextField.delegate = self;
     self.nameTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
+    
+    self.emailTextField.delegate = self;
     self.emailTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
+    
+    self.contactTextField.delegate = self;
     self.contactTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
+    
+    self.cityTextField.delegate = self;
     self.cityTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     
     self.registerButton.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants buttonTextSize]];
     self.registerButton.buttonColor = [ECConstants webRedColor];
-    self.registerButton.cornerRadius = 6.0f;
-    self.registerButton.shadowHeight = 3.0f;
     self.registerButton.cornerRadius = 6.0f;
     [self.registerButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.registerButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
     self.cancelButton.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants buttonTextSize]];
     self.cancelButton.buttonColor = [UIColor lightGrayColor];
-    self.cancelButton.cornerRadius = 6.0f;
-    self.cancelButton.shadowHeight = 3.0f;
     self.cancelButton.cornerRadius = 6.0f;
     [self.cancelButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.cancelButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -90,6 +93,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    if (textField == self.nameTextField) {
+        [self.emailTextField becomeFirstResponder];
+    }
+    if (textField == self.emailTextField) {
+        [self.passwordTextField becomeFirstResponder];
+    }
+    if (textField == self.passwordTextField) {
+        [self.contactTextField becomeFirstResponder];
+    }
+    if (textField == self.contactTextField) {
+        [self.cityTextField becomeFirstResponder];
+    }
+
+    return YES;
+}
+
 
 - (IBAction)registerUser:(id)sender {
     

@@ -41,12 +41,6 @@
 {
     [super viewDidLoad];
     [self configureUI];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -59,14 +53,16 @@
 
 - (void)configureUI
 {
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-background.png"]]];
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:[ECConstants lightBackgroundImageName]]]];
     
+    self.emailLabel.delegate = self;
     self.emailLabel.font = [UIFont flatFontOfSize:[ECConstants textSize]];
+    
+    self.passwordLabel.delegate = self;
     
     self.loginButton.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants buttonTextSize]];
     self.loginButton.buttonColor = [ECConstants webRedColor];
     self.loginButton.shadowColor = [UIColor greenSeaColor];
-    self.loginButton.shadowHeight = 3.0f;
     self.loginButton.cornerRadius = 6.0f;
     [self.loginButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.loginButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -74,7 +70,6 @@
     self.cancelButton.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants buttonTextSize]];
     self.cancelButton.buttonColor = [UIColor lightGrayColor];
     self.cancelButton.shadowColor = [UIColor greenSeaColor];
-    self.cancelButton.shadowHeight = 3.0f;
     self.cancelButton.cornerRadius = 6.0f;
     [self.cancelButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.cancelButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -82,7 +77,6 @@
     self.registerButton.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants buttonTextSize]];
     self.registerButton.buttonColor = [ECConstants webBlueColor];
     self.registerButton.shadowColor = [UIColor lightGrayColor];
-    self.registerButton.shadowHeight = 3.0f;
     self.registerButton.cornerRadius = 6.0f;
     [self.registerButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.registerButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -105,6 +99,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    if (textField == self.emailLabel) {
+        [self.passwordLabel becomeFirstResponder];
+    }
+    
+    return YES;
 }
 
 #pragma mark - Table view delegate

@@ -14,8 +14,9 @@
 #import "UINavigationBar+FlatUI.h"
 #import "UIBarButtonItem+FlatUI.h"
 #import "ECConstants.h"
-#import "ECMainHeaderView.h"
+//#import "ECMainHeaderView.h"
 #import "SVProgressHUD.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ECMainViewController ()
 
@@ -68,18 +69,28 @@
             NSLog(@"%@", winnerText);
             [self updateWinnerText:winnerText];
         }
+        else {
+            [self removeWinnerText];
+        }
     } errorHandler:^(NSError *error){
         [SVProgressHUD dismiss];
+        [self removeWinnerText];
         NSLog(@"%@", error);
     }];
     
-    [SVProgressHUD showWithStatus:@"Loading.." maskType:SVProgressHUDMaskTypeGradient];
+    [SVProgressHUD showWithStatus:@"Loading Winner.." maskType:SVProgressHUDMaskTypeGradient];
     [[ECConstants sharedEngine] enqueueOperation:getWinnerOperation];
+}
+
+- (void)removeWinnerText
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.winnerTextLabel removeFromSuperview];
+    });
 }
 
 - (void)updateWinnerText:(NSString *)winnerText
 {
-    NSLog(@"Winner = %@", winnerText);
     dispatch_async(dispatch_get_main_queue(), ^{
         self.winnerTextLabel.text = winnerText;
     });
@@ -93,15 +104,21 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
 
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"splash-background.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[ECConstants backgroundImageName]]];
     
     self.winnerTextLabel.font = [UIFont boldFlatFontOfSize:[ECConstants textSize]];
     self.winnerTextLabel.textColor = [ECConstants webRedColor];
+    self.winnerTextLabel.backgroundColor = [UIColor whiteColor];
+    self.winnerTextLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.winnerTextLabel.layer.shadowOffset = CGSizeMake(0, 1);
+    self.winnerTextLabel.layer.shadowOpacity = 0.7;
+    self.winnerTextLabel.layer.shadowRadius = 3;
+    self.winnerTextLabel.clipsToBounds = NO;
 
     //self.view.backgroundColor = [UIColor colorFromHexCode:@"#c2eafb"];
     //self.collectionView.backgroundColor = [UIColor whiteColor];
     self.menuItems = [ NSArray arrayWithObjects:
-                        @{@"image":@"question.png",@"title":@"Quiz",@"segue":@"showQuiz"},@{@"image":@"document.png",@"title":@"Abstract",@"segue":@"showAbstract"},@{@"image":@"calendar.png",@"title":@"Schedule",@"segue":@"showSchedule"},@{@"image":@"settings-3.png",@"title":@"Training",@"segue":@"showWorkshop"},@{@"image":@"star.png",@"title":@"Gurukul",@"segue":@"showGurukul"},@{@"image":@"microphone.png",@"title":@"Faculty",@"segue":@"showFaculty"},@{@"image":@"users.png",@"title":@"Committe",@"segue":@"showCommitte"},@{@"image":@"info.png",@"title":@"About",@"segue":@"showAbout"},@{@"image":@"compose-4.png",@"title":@"Suggestions",@"segue":@"showSuggestion"}, @{@"image":@"pin.png",@"title":@"Venue",@"segue":@"showVenue"}, @{@"image":@"envelope.png",@"title":@"Contact",@"segue":@"showContact"}, @{@"image":@"newspaper.png",@"title":@"News",@"segue":@"showNews"}, nil
+                        @{@"image":@"quiz.png",@"highlighted":@"quiz_active.png",@"title":@"Quiz",@"segue":@"showQuiz"},@{@"image":@"abstract.png",@"highlighted":@"abstract_active.png",@"title":@"Abstract",@"segue":@"showAbstract"},@{@"image":@"highlights.png",@"highlighted":@"highlights_active.png",@"title":@"Highlights",@"segue":@"showSchedule"},@{@"image":@"training.png",@"highlighted":@"training_active.png",@"title":@"Training",@"segue":@"showWorkshop"},@{@"image":@"gurukul.png",@"highlighted":@"gurukul_active.png",@"title":@"Gurukul",@"segue":@"showGurukul"},@{@"image":@"faculty.png",@"highlighted":@"faculty_active.png",@"title":@"Faculty",@"segue":@"showFaculty"},@{@"image":@"committee.png",@"highlighted":@"committee_active.png",@"title":@"Committe",@"segue":@"showCommitte"},@{@"image":@"about.png",@"highlighted":@"about_active.png",@"title":@"About",@"segue":@"showAbout"},@{@"image":@"suggestions.png",@"highlighted":@"suggestions_active.png",@"title":@"Suggest",@"segue":@"showSuggestion"}, @{@"image":@"venue.png",@"highlighted":@"venue_active.png",@"title":@"Venue",@"segue":@"showVenue"}, @{@"image":@"contact.png",@"highlighted":@"contact_active.png",@"title":@"Contact",@"segue":@"showContact"}, @{@"image":@"news.png",@"highlighted":@"news_active.png",@"title":@"News",@"segue":@"showNews"}, nil
                       ];
     
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:[ECConstants titleSize]]};
@@ -123,16 +140,31 @@
     
     ECMainViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    cell.menuLabel = self.menuItems[indexPath.item][@"title"];
-    cell.menuImage = [UIImage imageNamed:self.menuItems[indexPath.item][@"image"]];
+    cell.labelView.font = [UIFont boldFlatFontOfSize:[ECConstants textSize]];
+    cell.labelView.textColor = [UIColor whiteColor];
+    cell.labelView.text = self.menuItems[indexPath.item][@"title"];
+    
+    cell.imageView.image = [UIImage imageNamed:self.menuItems[indexPath.item][@"image"]];
+    cell.imageView.highlightedImage = [UIImage imageNamed:self.menuItems[indexPath.item][@"highlighted"]];
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    ECMainViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.imageView.highlighted = YES;
+    
     [self performSegueWithIdentifier:self.menuItems[indexPath.item][@"segue"] sender:self];
 }
+
+/*
+-(void) collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    ECMainViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor colorFromHexCode:@"#30000000"];
+
+}
+ */
 
 /*
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath

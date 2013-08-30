@@ -39,6 +39,25 @@
     }
     return self;
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    if (textField == self.nameTextField) {
+        [self.emailTextField becomeFirstResponder];
+    }
+    if (textField == self.emailTextField) {
+        [self.phoneTextField becomeFirstResponder];
+    }
+    if (textField == self.phoneTextField) {
+        [self.cityTextField becomeFirstResponder];
+    }
+    if (textField == self.cityTextField) {
+        [self.suggestionTextField becomeFirstResponder];
+    }
+    
+    return YES;
+}
+
 - (IBAction)submitSuggestion:(id)sender
 {
     NSString *name = self.nameTextField.text;
@@ -80,7 +99,7 @@
     }
     alertView.titleLabel.text = title;
     alertView.messageLabel.text = message;
-    alertView.alertContainer.backgroundColor = [ECConstants webRedColor];
+    alertView.alertContainer.backgroundColor = backgroundColor;
     [alertView show];
 }
 
@@ -96,42 +115,48 @@
 
 - (void)configureUI {
     self.title = @"Suggestion";
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-background.png"]]];
+
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:[ECConstants lightBackgroundImageName]]]];
+    self.tableView.backgroundView.contentMode = UIViewContentModeTop;
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
     self.sendButton.buttonColor = [ECConstants webBlueColor];
     self.sendButton.cornerRadius = 6.0f;
-    self.sendButton.shadowHeight = 3.0f;
-    self.sendButton.cornerRadius = 6.0f;
     self.sendButton.titleLabel.font = [UIFont boldFlatFontOfSize:[ECConstants buttonTextSize]];
     [self.sendButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.sendButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
+    self.nameTextField.delegate = self;
     self.nameTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     NSString *userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_name"];
     if (userName) {
         self.nameTextField.text = userName;
     }
 
+    self.emailTextField.delegate = self;
     self.emailTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     NSString *userEmail = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_email"];
     if (userEmail) {
         self.emailTextField.text = userEmail;
     }
     
+    self.phoneTextField.delegate = self;
     self.phoneTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     NSString *userContact = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_contact"];
     if (userContact) {
         self.phoneTextField.text = userContact;
     }
+    
+    self.cityTextField.delegate = self;
     self.cityTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     NSString *userCity = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_city"];
     if (userCity) {
         self.cityTextField.text = userCity;
     }
     
+    self.suggestionTextField.delegate = self;
     self.suggestionTextField.font = [UIFont flatFontOfSize:[ECConstants textSize]];
     self.suggestionTextField.delegate = self;
     

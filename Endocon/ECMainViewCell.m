@@ -13,9 +13,6 @@
 
 @interface ECMainViewCell()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *labelView;
-
 @end
 
 @implementation ECMainViewCell
@@ -29,19 +26,21 @@
     return self;
 }
 
+/*
 - (void)setMenuImage:(UIImage *)menuImage
 {
     _menuImage = menuImage;
     self.imageView.image = menuImage;
+    self.imageView.highlightedImage = self.menuHighlightedImage;
 }
 
 - (void)setMenuLabel:(NSString *)menuLabel {
     _menuLabel = menuLabel;
     self.labelView.text = menuLabel;
-    self.labelView.font = [UIFont boldFlatFontOfSize:12];
-    self.labelView.textColor = [UIColor blackColor];
+    self.labelView.font = [UIFont boldFlatFontOfSize:[ECConstants textSize]];
+    self.labelView.textColor = [UIColor whiteColor];
 }
-
+*/
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

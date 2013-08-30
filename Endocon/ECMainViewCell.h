@@ -10,7 +10,7 @@
 
 @interface ECMainViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) UIImage *menuImage;
-@property (nonatomic, strong) NSString *menuLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *labelView;
 
 @end

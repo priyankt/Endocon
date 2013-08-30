@@ -39,7 +39,7 @@
 {
     self.title = @"Endoscopy Gurukul";
     [self.gurukulWebView setOpaque:NO];
-    self.gurukulWebView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"splash-background.png"]];
+    self.gurukulWebView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[ECConstants lightBackgroundImageName]]];
     //self.gurukulWebView.backgroundColor = [UIColor colorFromHexCode:@"#c2eafb"];
 
     [[self.gurukulWebView scrollView] setBounces:NO];

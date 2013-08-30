@@ -34,7 +34,7 @@
 
 + (NSString *)baseURL
 {
-    return @"endocon2014.com";
+    return @"www.endocon2014.com";
 }
 
 + (UIColor *)webBlueColor
@@ -47,6 +47,15 @@
     return [UIColor colorFromHexCode:@"#FE0000"];
 }
 
++ (NSString *)backgroundImageName
+{
+    return @"endoscopy-bg2.png";
+}
+
++ (NSString *)lightBackgroundImageName
+{
+    return @"splash-background.bak.png";
+}
 
 + (ECWebService *)sharedEngine
 {
